@@ -11,7 +11,9 @@ public class RecentlyUsedList {
 	}
 
 	public void add(final String input) {
-		this.recentlyUsedList.add(0, input);
+		if (!this.recentlyUsedList.contains(input)) {
+			this.recentlyUsedList.add(0, input);
+		}
 	}
 }
 
