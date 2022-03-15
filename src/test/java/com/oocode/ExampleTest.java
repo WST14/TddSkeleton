@@ -4,8 +4,7 @@ import org.junit.*;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class ExampleTest {
 
@@ -37,5 +36,20 @@ public class ExampleTest {
 		recentlyUsedList.add(XYZ);
 		recentlyUsedList.add(XYZ);
 		assertEquals(1, recentlyUsedList.getRecentlyUsedList().size());
+	}
+
+	@Test
+	public void addInteger() {
+		final RecentlyUsedList recentlyUsedList = new RecentlyUsedList();
+		recentlyUsedList.add(5);
+		assertEquals(5, recentlyUsedList.getRecentlyUsedList().get(0));
+	}
+
+	@Test
+	public void addNull() {
+		final RecentlyUsedList recentlyUsedList = new RecentlyUsedList();
+		final IllegalArgumentException ex =
+				assertThrows(IllegalArgumentException.class, () -> recentlyUsedList.add(null));
+		assertEquals("Input is null.", ex.getMessage());
 	}
 }
