@@ -52,4 +52,12 @@ public class ExampleTest {
 				assertThrows(IllegalArgumentException.class, () -> recentlyUsedList.add(null));
 		assertEquals("Input is null.", ex.getMessage());
 	}
+
+	@Test
+	public void discardsElementsAboveMaximumSize() {
+		final RecentlyUsedList recentlyUsedList =  new RecentlyUsedList(1);
+		recentlyUsedList.add("ABC");
+		recentlyUsedList.add("DEF");
+		assertEquals(1,);
+	}
 }
