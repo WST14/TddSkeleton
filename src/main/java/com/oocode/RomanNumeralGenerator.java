@@ -7,6 +7,12 @@ public class RomanNumeralGenerator {
     }
 
     public String get(int i) {
-        return "I";
+        if(i == 1) {
+            return "I";
+        } else if (i == 5) {
+            return "V";
+        } else {
+            return "Not supported";
+        }
     }
 }

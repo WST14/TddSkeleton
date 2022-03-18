@@ -14,4 +14,9 @@ public class RomanNumeralGeneratorTest {
 	public void testNumber1() {
 		Assert.assertEquals("I", romanNumeralGenerator.get(1));
 	}
+
+	@Test
+	public void testNumber5() {
+		Assert.assertEquals("V", romanNumeralGenerator.get(5));
+	}
 }
