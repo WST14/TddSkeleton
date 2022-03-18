@@ -29,4 +29,12 @@ public class RomanNumeralGeneratorTest {
 		Assert.assertEquals("III", romanNumeralGenerator.get(3));
 		Assert.assertEquals("IV", romanNumeralGenerator.get(4));
 	}
+
+	@Test
+	public void test5to10() {
+		Assert.assertEquals("VI", romanNumeralGenerator.get(6));
+		Assert.assertEquals("VII", romanNumeralGenerator.get(7));
+		Assert.assertEquals("VIII", romanNumeralGenerator.get(8));
+		Assert.assertEquals("IX", romanNumeralGenerator.get(9));
+	}
 }
