@@ -7,9 +7,21 @@ public class RomanNumeralGenerator {
     }
 
     public String get(int i) {
-        if(i == 1) {
-            return "I";
-        } else if (i == 5) {
+
+        if (i < 5 && i > 0) {
+            if (i == 4) {
+                return "IV";
+            }
+            else {
+                String stringOutput = "";
+                for (int j  = 0; j < i; j++) {
+                    stringOutput += "I";
+                }
+                return  stringOutput;
+            }
+        }
+
+        if (i == 5) {
             return "V";
         } else if (i == 10) {
             return "X";

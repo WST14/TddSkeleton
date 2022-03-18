@@ -22,5 +22,11 @@ public class RomanNumeralGeneratorTest {
 		Assert.assertEquals("M", romanNumeralGenerator.get(1000));
 	}
 
-
+	@Test
+	public void testLessThan5() {
+		Assert.assertEquals("I", romanNumeralGenerator.get(1));
+		Assert.assertEquals("II", romanNumeralGenerator.get(2));
+		Assert.assertEquals("III", romanNumeralGenerator.get(3));
+		Assert.assertEquals("IV", romanNumeralGenerator.get(4));
+	}
 }
